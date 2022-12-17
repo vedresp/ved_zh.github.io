@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Price List - you can add new items to this list</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+  <h1>Price List</h1>
+  <ul id="priceList">
+    <!-- prices will be added here -->
+  </ul>
+  <p id="lowestPrice"></p>
+  <p id="averagePrice"></p>
+  <p id="standardDeviation"></p>
+  <form id="addItemForm">
+    <label for="itemName">Item Name:</label><br>
+    <input type="text" id="itemName" name="itemName"><br>
+    <label for="itemPrice">Item Price:</label><br>
+    <input type="number" id="itemPrice" name="itemPrice"><br><br>
+    <button type="submit">Add Item</button>
+  </form>
+  <script src="../js/script.js"></script>
+</body>
+</html>
