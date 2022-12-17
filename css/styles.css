@@ -1,0 +1,92 @@
+.painters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Helvetica', cursive;
+  color: white;
+  font-size: 34px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Helvetica', cursive;
+  color: white;
+  font-size: 24px;
+}
+
+.painters-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.painter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  transition: margin 0.5s ease-in-out;
+}
+
+.paintings {
+  display: flex;
+  flex-direction: row;
+}
+
+.paintings img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0 10px;
+  border: 5px solid white;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.paintings img:hover {
+  border-color: black;
+  box-shadow: 0 0 15px black;
+}
+
+.paintings::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  animation: panZoom 30s linear infinite;
+}
+
+.zoom {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 1;
+  z-index: 10; /* add this to make the zoomed image appear above the other elements */
+}
+
+.zoom-container {
+  display: none; /* hide the zoom container by default */
+}
+
+.zoom-container.zoom {
+  display: block; /* show the zoom container when the zoom class is added */
+}
+
+.disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
