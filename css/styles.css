@@ -70,15 +70,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(2);
   opacity: 1;
-  z-index: 10; /* add this to make the zoomed image appear above the other elements */
+  z-index: 10;
 }
 
 .zoom-container {
-  display: none; /* hide the zoom container by default */
+  display: none;
 }
 
 .zoom-container.zoom {
-  display: block; /* show the zoom container when the zoom class is added */
+  display: block;
 }
 
 .disclaimer {
